@@ -14,6 +14,10 @@ export default function Hero() {
             <span className="block">One Stop Solution</span>
             <span className="block">Local marketing needs</span>
           </h1>
+          <p className="mt-4 md:mt-6 text-white/90 text-sm sm:text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae
+            justo nec velit tristique luctus, sed cursus massa purus eget sem.
+          </p>
         </div>
       </GridBeams>
     </section>
