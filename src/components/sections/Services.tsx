@@ -18,22 +18,52 @@ export default function Services() {
         <h2 className="text-3xl font-semibold">Our Services</h2>
 
         {/* Centered single-ring orbiting circle */}
-        <div className="relative size-[480px] mt-10 md:mt-12">
-          <OrbitingCircles radius={200} iconSize={80} duration={30}>
-            {services.map((service, i) => (
-              <div
-                key={i}
-                className="flex flex-col items-center text-center"
-              >
-                <img
-                  src={service.icon}
-                  alt={`${service.name} icon`}
-                  className="size-12 rounded-full object-cover shadow-md"
-                />
-                <p className="mt-1.5 text-xs font-medium">{service.name}</p>
-              </div>
-            ))}
-          </OrbitingCircles>
+        <div className="relative flex items-center justify-center size-[300px] md:size-[480px] mt-10 md:mt-12">
+          {/* Mobile view */}
+          <div className="md:hidden">
+            <OrbitingCircles
+              radius={140}
+              iconSize={80}
+              duration={30}
+            >
+              {services.map((service, i) => (
+                <div
+                  key={i}
+                  className="flex flex-col items-center text-center"
+                >
+                  <img
+                    src={service.icon}
+                    alt={`${service.name} icon`}
+                    className="size-12 rounded-full object-cover shadow-md"
+                  />
+                  <p className="mt-1.5 text-xs font-medium">{service.name}</p>
+                </div>
+              ))}
+            </OrbitingCircles>
+          </div>
+
+          {/* Desktop view */}
+          <div className="hidden md:flex">
+            <OrbitingCircles
+              radius={200}
+              iconSize={80}
+              duration={30}
+            >
+              {services.map((service, i) => (
+                <div
+                  key={i}
+                  className="flex flex-col items-center text-center"
+                >
+                  <img
+                    src={service.icon}
+                    alt={`${service.name} icon`}
+                    className="size-12 rounded-full object-cover shadow-md"
+                  />
+                  <p className="mt-1.5 text-xs font-medium">{service.name}</p>
+                </div>
+              ))}
+            </OrbitingCircles>
+          </div>
         </div>
       </div>
     </section>

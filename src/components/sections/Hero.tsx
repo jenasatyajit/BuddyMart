@@ -13,7 +13,7 @@ export default function Hero() {
           <div className="inline-block rounded-full bg-secondary/20 px-4 py-1 text-sm font-medium text-secondary mb-4">
             Launching Soon 🚀
           </div>
-          <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight text-white">
+                    <h1 className="text-3xl sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight text-white">
             <span className="block">One Stop Solution For</span>
             <span className="block text-secondary">Local marketing needs</span>
           </h1>
@@ -21,7 +21,7 @@ export default function Hero() {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae
             justo nec velit tristique luctus, sed cursus massa purus eget sem.
           </p>
-          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-3xl mx-auto">
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 max-w-xs sm:max-w-3xl mx-auto">
             <div className="rounded-xl border border-white/10 bg-white/5 px-4 py-3 md:px-6 md:py-4">
               <div className="flex flex-col items-center justify-center text-center">
                 <span className="text-xl md:text-2xl font-bold text-secondary">100+</span>
