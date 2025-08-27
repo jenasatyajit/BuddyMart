@@ -9,8 +9,8 @@ function App() {
     <main className="min-h-screen w-full bg-secondary/5 text-gray-900">
       <Hero />
       <Services />
-      <ComingSoon />
       <About />
+      <ComingSoon />
     </main>
   )
 }
