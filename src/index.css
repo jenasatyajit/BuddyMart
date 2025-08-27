@@ -12,16 +12,93 @@
 
 @theme inline {
   --animate-orbit: orbit calc(var(--duration) * 1s) linear infinite;
+  --animate-float-slow: float-slow 6s ease-in-out infinite;
+  --animate-float-medium: float-medium 4s ease-in-out infinite;
+  --animate-float-fast: float-fast 3s ease-in-out infinite;
+  --animate-float-delayed: float-delayed 5s ease-in-out infinite;
  
   @keyframes orbit {
     0% {
       transform: rotate(calc(var(--angle) * 1deg))
-        translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg));
+        translateY(calc(var(--radius) * 1px)) rotate(calc(var(--angle) * -1deg))
+        translateX(0px) translateZ(0px);
+    }
+    12.5% {
+      transform: rotate(calc(var(--angle) * 1deg + 45deg))
+        translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 45deg))
+        translateX(-6px) translateZ(-12px);
+    }
+    25% {
+      transform: rotate(calc(var(--angle) * 1deg + 90deg))
+        translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 90deg))
+        translateX(0px) translateZ(-16px);
+    }
+    37.5% {
+      transform: rotate(calc(var(--angle) * 1deg + 135deg))
+        translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 135deg))
+        translateX(6px) translateZ(-12px);
+    }
+    50% {
+      transform: rotate(calc(var(--angle) * 1deg + 180deg))
+        translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 180deg))
+        translateX(0px) translateZ(0px);
+    }
+    62.5% {
+      transform: rotate(calc(var(--angle) * 1deg + 225deg))
+        translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 225deg))
+        translateX(-6px) translateZ(12px);
+    }
+    75% {
+      transform: rotate(calc(var(--angle) * 1deg + 270deg))
+        translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 270deg))
+        translateX(0px) translateZ(16px);
+    }
+    87.5% {
+      transform: rotate(calc(var(--angle) * 1deg + 315deg))
+        translateY(calc(var(--radius) * 1px)) rotate(calc((var(--angle) * -1deg) - 315deg))
+        translateX(6px) translateZ(12px);
     }
     100% {
       transform: rotate(calc(var(--angle) * 1deg + 360deg))
         translateY(calc(var(--radius) * 1px))
-        rotate(calc((var(--angle) * -1deg) - 360deg));
+        rotate(calc((var(--angle) * -1deg) - 360deg))
+        translateX(0px) translateZ(0px);
+    }
+  }
+
+  @keyframes float-slow {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-20px) rotate(2deg);
+    }
+  }
+
+  @keyframes float-medium {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-15px) rotate(-2deg);
+    }
+  }
+
+  @keyframes float-fast {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-10px) rotate(1deg);
+    }
+  }
+
+  @keyframes float-delayed {
+    0%, 100% {
+      transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-18px) rotate(-1deg);
     }
   }
 }
