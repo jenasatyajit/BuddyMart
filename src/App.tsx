@@ -1,8 +1,9 @@
 // App root with Tailwind v4
 import Hero from "./components/sections/Hero"
+import ComingSoon from "./components/sections/ComingSoon"
 import Services from "./components/sections/Services"
 import About from "./components/sections/About"
-import ComingSoon from "./components/sections/ComingSoon"
+import Footer from "./components/sections/Footer"
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Services />
       <About />
       <ComingSoon />
+      <Footer />
     </main>
   )
 }
