@@ -6,7 +6,7 @@ export default function Services() {
     { name: "Vendor Panel", icon: "🏪" },
     { name: "Customer App", icon: "📱" },
     { name: "Delivery App", icon: "🚚" },
-    { name: "Flutter Website", icon: "🌐" },
+    { name: "React Website", icon: "🌐" },
     { name: "Food Module", icon: "🍕" },
     { name: "Grocery", icon: "🛒" },
     { name: "Pharmacy", icon: "💊" },
@@ -18,10 +18,10 @@ export default function Services() {
         {/* Header */}
         <div className="text-center mb-8">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Total Package to <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Streamline</span> Your eCommerce Marketplace
+          Lorem ipsum dolor sit amet <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">consectetur adipiscing</span> Consectetur adipiscing elit quisque faucibus
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            With BuddyMart, you'll get all essential panels, websites, and mobile apps to operate your eCommerce business smoothly.
+          Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit quisque faucibus ex sapien vitae
           </p>
         </div>
 

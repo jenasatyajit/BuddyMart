@@ -21,7 +21,7 @@ export default function ComingSoon() {
         </div>
         <div className="flex justify-center">
           <img
-            src="/lauching.png"
+            src="/launching-2.png"
             alt="Launching Soon Illustration"
             className="max-w-xs md:max-w-sm select-none pointer-events-none"
           />

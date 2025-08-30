@@ -6,8 +6,8 @@
 
 /* Brand colors (Tailwind v4 tokens) */
 @theme {
-  --color-primary: oklch(34.70% 0.089 251.09);
-  --color-secondary: oklch(87.30% 0.140 93.54);
+  --color-primary: oklch(0.5234 0.1347 144.17);
+  --color-secondary: oklch(0.8369 0.1644 84.43);
 }
 
 @theme inline {

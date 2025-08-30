@@ -115,7 +115,7 @@ export default function About() {
 					{ text: 'Dairy', className: 'left-[52%] top-[78%] bg-amber-500' },
 				],
 				image:
-					'https://help.apple.com/assets/683A54F5227CBBDB98051B96/683A54FC545676DF600F97D4/en_US/c3b94825fef8264533c93c126b5fa4ae.png'
+					'/grocery.png'
 			},
 			{
 				key: 'food',
@@ -131,7 +131,7 @@ export default function About() {
 					{ text: 'Noodles', className: 'left-[54%] top-[78%] bg-amber-500' },
 				],
 				image:
-					'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfjt2NZFPpdPWe7kYvzIw36_vLkXTpoxQsRw&s',
+					'/food.png',
 			},
 			{
 				key: 'pharmacy',
@@ -147,7 +147,7 @@ export default function About() {
 					{ text: 'Equipment', className: 'left-[52%] top-[78%] bg-emerald-500' },
 				],
 				image:
-					'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1080&auto=format&fit=crop',
+					'/pharmacy.png',
 			},
 			{
 				key: 'shop',
@@ -163,7 +163,7 @@ export default function About() {
 					{ text: 'Gadgets', className: 'left-[52%] top-[78%] bg-orange-500' },
 				],
 				image:
-					'https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=1080&auto=format&fit=crop',
+					'/catering.png',
 			},
 			{
 				key: 'parcel',
@@ -177,7 +177,7 @@ export default function About() {
 					{ text: 'Same-day', className: 'left-[52%] top-[38%] bg-primary' },
 				],
 				image:
-					'https://images.unsplash.com/photo-1540331547168-8b63109225b7?q=80&w=1080&auto=format&fit=crop',
+					'/tutoring.png',
 			},
 			{
 				key: 'rental',

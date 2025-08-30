@@ -13,22 +13,14 @@ export default function Hero() {
         <span className="text-white font-extrabold text-xl md:text-2xl">Buddymart</span>
       </div>
 
-      {/* Top-right: Coming soon with gradient and flicker, placed lower and towards the side */}
-      <div className="absolute z-20 top-12 sm:top-16 right-8 sm:right-12 md:right-20 text-sm md:text-base font-semibold animate-pulse">
-        <div className="rounded-full border border-secondary/30 bg-black/20 backdrop-blur px-4 py-1.5 shadow-sm">
-          <span className="text-secondary">
-            Coming soon
-          </span>
-        </div>
-      </div>
       <GridBeams
         className="w-full min-h-screen flex items-center justify-center px-6 py-24"
         /* Hide grid lines */
         gridColor="transparent"
-        backgroundColor="oklch(34.70% 0.089 251.09)"
+        backgroundColor="var(--color-primary)"
       >
         <div className="relative z-10 mx-auto max-w-4xl text-center">
-          <div className="inline-block rounded-full bg-secondary/20 px-4 py-1 text-sm font-medium text-secondary mb-4">
+          <div className="inline-block rounded-full bg-primary/20 px-4 py-1 text-sm font-medium text-white mb-4">
             Launching Soon 🚀
           </div>
           <h1 className="text-xl sm:text-2xl md:text-4xl lg:text-5xl font-bold tracking-tight leading-tight text-white">
