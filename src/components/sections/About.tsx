@@ -42,33 +42,35 @@ function CategoryPill({
 	icon?: string
 	compact?: boolean
 }) {
-	const content = (
-		<>
-			{icon && (
-				<span
-					className={
-						'grid place-items-center rounded-full bg-white/90 text-black ' +
-						(compact ? 'size-6 text-xs' : 'size-8 text-sm')
-					}
-				>
-					{icon}
-				</span>
-			)}
-			{children}
-		</>
-	)
+	// Map gradient colors to solid background colors for inactive state
+	const getBackgroundColor = (gradientFrom: string) => {
+		if (gradientFrom.includes('green')) return 'bg-green-500'
+		if (gradientFrom.includes('teal')) return 'bg-teal-500'
+		if (gradientFrom.includes('amber')) return 'bg-amber-500'
+		if (gradientFrom.includes('yellow')) return 'bg-yellow-500'
+		return 'bg-blue-500'
+	}
 
 	if (active) {
 		return (
 			<PulsatingButton
 				onClick={onClick}
 				className={
-					`w-full ${compact ? 'p-3 text-sm' : 'p-6 text-base'} rounded-2xl font-semibold bg-gradient-to-br ${gradientFrom} ${gradientTo} text-white shadow-lg ring-2 ring-white/40 ring-offset-2 ring-offset-white/70`
+					`w-full ${compact ? 'h-24 p-4' : 'h-32 p-6'} rounded-2xl font-semibold bg-gradient-to-br ${gradientFrom} ${gradientTo} text-white shadow-lg`
 				}
 				pulseColor="#ffffff66"
 				duration="1.6s"
 			>
-				<div className="flex items-center justify-center gap-2">{content}</div>
+				<div className="flex flex-col items-center justify-center gap-2">
+					{icon && (
+						<div className="bg-white/20 rounded-full p-3">
+							<span className={compact ? 'text-xl' : 'text-2xl'}>{icon}</span>
+						</div>
+					)}
+					<span className={compact ? 'text-sm font-semibold' : 'text-base font-semibold'}>
+						{children}
+					</span>
+				</div>
 			</PulsatingButton>
 		)
 	}
@@ -77,10 +79,19 @@ function CategoryPill({
 		<button
 			onClick={onClick}
 			className={
-				`flex w-full items-center justify-center gap-2 rounded-2xl border ${compact ? 'p-3 text-sm' : 'p-6 text-base'} font-semibold transition-all border-black/10 bg-white text-black hover:bg-black/[0.03] hover:shadow-md hover:-translate-y-[1px]`
+				`w-full ${compact ? 'h-24 p-4' : 'h-32 p-6'} rounded-2xl font-semibold transition-all bg-white border border-gray-200 text-gray-700 hover:shadow-md hover:-translate-y-0.5 hover:border-gray-300`
 			}
 		>
-			{content}
+			<div className="flex flex-col items-center justify-center gap-2">
+				{icon && (
+					<div className={`${getBackgroundColor(gradientFrom)} rounded-full p-3`}>
+						<span className={`${compact ? 'text-xl' : 'text-2xl'} text-white`}>{icon}</span>
+					</div>
+				)}
+				<span className={compact ? 'text-sm font-semibold' : 'text-base font-semibold'}>
+					{children}
+				</span>
+			</div>
 		</button>
 	)
 }
@@ -236,10 +247,10 @@ export default function About() {
 					</div>
 				</div>
 
-				{/* Desktop: 3-column layout: left buttons, phone, right buttons */}
+				{/* Desktop: 3-column layout: left buttons, center buttons, right phone (mirrored) */}
 				<div className="mt-6 hidden md:grid md:grid-cols-3 gap-8 items-center">
 					{/* Left 3 buttons */}
-					<div className="order-2 md:order-1 grid gap-4 max-w-xs mx-auto w-full">
+					<div className="order-1 grid gap-4 max-w-xs mx-auto w-full">
 						{categories.slice(0, 3).map(cat => (
 							<CategoryPill
 								key={cat.key}
@@ -253,18 +264,8 @@ export default function About() {
 						))}
 					</div>
 
-					{/* Center phone */}
-					<div className="order-1 md:order-2 relative flex justify-center">
-						<div className="w-[200px] sm:w-[220px] md:w-[260px] overflow-hidden">
-							<Iphone15Pro
-								className="w-full h-auto select-none pointer-events-none"
-								src={current.image}
-							/>
-						</div>
-					</div>
-
-					{/* Right 3 buttons */}
-					<div className="order-3 grid gap-4 max-w-xs mx-auto w-full">
+					{/* Center 3 buttons */}
+					<div className="order-2 grid gap-4 max-w-xs mx-auto w-full">
 						{categories.slice(3, 6).map(cat => (
 							<CategoryPill
 								key={cat.key}
@@ -276,6 +277,16 @@ export default function About() {
 								{cat.label}
 							</CategoryPill>
 						))}
+					</div>
+
+					{/* Right phone */}
+					<div className="order-3 relative flex justify-center">
+						<div className="w-[200px] sm:w-[220px] md:w-[260px] overflow-hidden">
+							<Iphone15Pro
+								className="w-full h-auto select-none pointer-events-none"
+								src={current.image}
+							/>
+						</div>
 					</div>
 				</div>
 			</div>
