@@ -13,7 +13,7 @@ export default function Services() {
   ];
 
   return (
-    <section id="services" className="w-full py-12 md:py-16 bg-gray-50 relative overflow-hidden">
+    <section id="services" className="w-full pt-38 md:pt-42 pb-12 md:pb-16 bg-gray-50 relative overflow-hidden">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-8">
