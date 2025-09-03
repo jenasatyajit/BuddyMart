@@ -40,7 +40,7 @@ export default function Hero() {
         <img
           src="/src/assets/herosec.webp"
           alt="BuddyMart Hero"
-          className="w-full h-auto scale-150 md:scale-200 lg:scale-150 xl:scale-130 object-contain"
+          className="w-full h-auto scale-200 md:scale-200 lg:scale-150 xl:scale-130 object-contain"
           style={{ background: 'transparent' }}
         />
       </div>
